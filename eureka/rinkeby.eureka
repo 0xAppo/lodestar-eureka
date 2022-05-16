@@ -1,2 +1,12 @@
 
 // For now, nothing special
+
+WETH#weth [weth] {
+  address: "0xc778417E063141139Fce010982780140Aa0cD5Ab"
+}
+
+Uniswap#uniswap [uniswap] {
+  // This address is the same for all supported test-nets!
+  // See https://uniswap.org/docs/v2/smart-contracts/factory/
+  address: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"
+}
