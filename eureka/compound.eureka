@@ -33,7 +33,7 @@ CToken#cETH [b73e68c] {
 }
 
 CToken#cUSDC [b73e68c] {
-  type: "immutable"
+  type: "delegator"
   symbol: "cUSDC"
   name: "Compound USDC"
   underlying: #usdc
@@ -57,14 +57,13 @@ SimplePriceOracle#oracle [b73e68c] {
 }
 
 // Unitroller and Comptroller
-Comptroller#g1 [b73e68c] {
-  generation: "g1"
+Comptroller#g0 [b73e68c] {
 }
 
 Unitroller#comptroller [b73e68c] {
   admin: $admin
-  implementation: #g1
-  generation: "g1"
+  implementation: #g0
+  generation: "g0"
   oracle: #oracle
   close_factor: 0.5e18
   max_assets: 20
@@ -80,35 +79,11 @@ Unitroller#comptroller [b73e68c] {
   }
 }
 
-Comptroller#g2 [25fe06d] {
-  generation: "g2"
-}
-
 // Interest Rate Models
 InterestRateModel#Base200bps_Slope1000bps [b73e68c] {
   type: 'linear'
   base: 200e14
   slope: 1000e14
-}
-
-InterestRateModel#Base500bps_Slope1200bps [b73e68c] {
-  type: 'linear'
-  base: 500e14
-  slope: 1200e14
-}
-
-InterestRateModel#Base200bps_Slope3000bps [b73e68c] {
-  type: 'linear'
-  base: 200e14
-  slope: 3000e14
-}
-
-InterestRateModel#Base200bps_Slope2000bps_Jump20000bps_Kink90 [b73e68c] {
-  type: 'jump'
-  base: 200e14
-  slope: 2000e14
-  jump: 20000e14
-  kink: 0.9e18
 }
 
 // CompoundLens
