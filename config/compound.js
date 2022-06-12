@@ -437,6 +437,9 @@ define("Unitroller", {
           case 'g4':
             actions.push([comptroller, '_become(Unitroller unitroller)', { unitroller }, { canonical: '_become(address)' }]);
             break;
+          case 'g0':
+            actions.push([comptroller, '_become(Unitroller unitroller)', { unitroller }, { canonical: '_become(address)' }]);
+            break;
           default:
             throw new Error(`Unknown generation: \`${generation}\` for _become`);
         }
